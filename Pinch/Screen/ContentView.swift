@@ -11,6 +11,7 @@ struct ContentView: View {
     //MARK: - Property
     @State private var isAnimating: Bool = false
     @State private var imageScale: CGFloat = 1
+    @State private var imageOffset: CGSize = .zero
     //MARK: - Function
     
     //MARK: - Content
@@ -26,6 +27,7 @@ struct ContentView: View {
                     .padding()
                     .shadow(color: .black.opacity(0.2), radius: 12, x:2, y: 2)
                     .opacity(isAnimating ? 1 : 0)
+                    .offset(x: imageOffset.width, y: imageOffset.height)
                     .scaleEffect(imageScale)
                 //MARK: -1. TAB GESTURE
                     .onTapGesture(count: 2, perform:  {
