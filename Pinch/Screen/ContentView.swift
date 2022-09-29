@@ -12,8 +12,15 @@ struct ContentView: View {
     @State private var isAnimating: Bool = false
     @State private var imageScale: CGFloat = 1
     @State private var imageOffset: CGSize = .zero //is equals to CGSize(width: 0, height: 0)
+    
     //MARK: - Function
     
+    func resetImageState() {
+        return withAnimation(.spring()){
+            imageScale = 1
+            imageOffset = .zero
+        }
+    }
     //MARK: - Content
     
     var body: some View {
@@ -37,7 +44,7 @@ struct ContentView: View {
                             }
                         }
                         else {
-                            imageScale = 1
+                            resetImageState()
                         }
                     })
                 //MARK: -2. Drag Gesture
@@ -50,11 +57,7 @@ struct ContentView: View {
                             }
                             .onEnded{ _ in
                                 if imageScale <= 1{
-                                    withAnimation(.spring()){
-                                    imageScale = 1
-                                    imageOffset = .zero
-                                        
-                                    }
+                                 resetImageState()
                                 }
                             }
                     )
