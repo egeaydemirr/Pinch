@@ -11,7 +11,7 @@ struct ContentView: View {
     //MARK: - Property
     @State private var isAnimating: Bool = false
     @State private var imageScale: CGFloat = 1
-    @State private var imageOffset: CGSize = .zero //is equals to CGSize(width: 0, height: 0)
+    @State private var imageOffset: CGSize = .zero //Konumu, is equals to CGSize(width: 0, height: 0)
     
     //MARK: - Function
     
@@ -40,7 +40,7 @@ struct ContentView: View {
                     .onTapGesture(count: 2, perform:  {
                         if imageScale == 1 {
                             withAnimation(.spring()){
-                                imageScale = 5
+                                imageScale = 5  
                             }
                         }
                         else {
