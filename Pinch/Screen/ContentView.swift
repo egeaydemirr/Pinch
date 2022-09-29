@@ -11,7 +11,7 @@ struct ContentView: View {
     //MARK: - Property
     @State private var isAnimating: Bool = false
     @State private var imageScale: CGFloat = 1
-    @State private var imageOffset: CGSize = .zero
+    @State private var imageOffset: CGSize = .zero //is equals to CGSize(width: 0, height: 0)
     //MARK: - Function
     
     //MARK: - Content
@@ -40,6 +40,16 @@ struct ContentView: View {
                             imageScale = 1
                         }
                     })
+                //MARK: -2. Drag Gesture
+                    .gesture(
+                        DragGesture()
+                            .onChanged{value in
+                                withAnimation(.linear(duration: 1)){
+                                    imageOffset = value.translation
+                                }
+                            }
+                    )
+                
                 
             }// ZStack:
             .navigationTitle("Pinch and Zoom")
