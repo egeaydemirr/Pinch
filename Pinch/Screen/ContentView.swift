@@ -49,6 +49,7 @@ struct ContentView: View {
                         }
                     })
                 //MARK: -2. Drag Gesture
+                //deneme
                     .gesture(
                         DragGesture()
                             .onChanged{value in
