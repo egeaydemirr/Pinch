@@ -41,7 +41,7 @@ struct ContentView: View {
                     .onTapGesture(count: 2, perform:  {
                         if imageScale == 1 {
                             withAnimation(.spring()){
-                                imageScale = 5  
+                                imageScale = 5
                             }
                         }
                         else {
@@ -49,13 +49,11 @@ struct ContentView: View {
                         }
                     })
                 //MARK: -2. Drag Gesture
-                //deneme
                     .gesture(
                         DragGesture()
                             .onChanged{value in
                                 withAnimation(.linear(duration: 1)){
-                                    imageOffset = value.translation
-                                }
+                                    imageOffset = value.translation                                }
                             }
                             .onEnded{ _ in
                                 if imageScale <= 1{
