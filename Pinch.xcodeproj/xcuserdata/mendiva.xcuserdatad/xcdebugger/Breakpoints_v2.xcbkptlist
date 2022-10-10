@@ -14,10 +14,42 @@
             filePath = "Pinch/Screen/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "ContentView"
             landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "C0071CDE-9AE1-4F23-9AE2-09F93FD01D29 - 80f871947456615d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pinch.ContentView.body.getter : some"
+                  moduleName = "Pinch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mendiva/Documents/Coding/SwiftUI/Pinch%20App/Students/Pinch/Pinch/Screen/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "564">
+               </Location>
+               <Location
+                  uuid = "C0071CDE-9AE1-4F23-9AE2-09F93FD01D29 - a15bce8b6dcf671e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.overlay&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(_: &#x3c4;_1_0, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0 in Pinch.ContentView.body.getter : some"
+                  moduleName = "Pinch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mendiva/Documents/Coding/SwiftUI/Pinch%20App/Students/Pinch/Pinch/Screen/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "800">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
