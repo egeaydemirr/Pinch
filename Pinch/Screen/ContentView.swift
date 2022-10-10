@@ -85,21 +85,39 @@ struct ContentView: View {
                         // Scale Down
                         Button {
                             //Some Actions
+                            withAnimation(.spring()){
+                                if imageScale > 1{
+                                    imageScale -= 1
+                                }
+                                if imageScale <= 1{
+                                    resetImageState()
+                                }
+                            }
                         }label: {
                             ControlImageView(icon: "minus.magnifyingglass")
                         }
                         // Reset
                         Button {
                             //Some Actions
+                            resetImageState()
+
                         }label: {
                             ControlImageView(icon: "arrow.up.left.and.down.right.magnifyingglass")
                         }
                         // Scale Up
                         Button {
-                            //Some Actions
-                        }label: {
-                            ControlImageView(icon: "plus.magnifyingglass")
-                        }
+                            withAnimation(.spring()){
+                                if imageScale < 5{
+                                    imageScale += 1
+                                    if imageScale > 5 {
+                                        imageScale = 5
+                                    }
+                                }
+                            }
+                            }label: {
+                                ControlImageView(icon: "plus.magnifyingglass")
+                            }
+                        
                     }//: End Controls
                     .padding(EdgeInsets(top: 12, leading: 20, bottom: 12, trailing: 20))
                     .cornerRadius(12)
