@@ -13,6 +13,7 @@
 		9364278F28E3404C006DD3A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9364278E28E3404C006DD3A7 /* Preview Assets.xcassets */; };
 		93D8428428F42DDA007C79F4 /* ControlImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D8428328F42DD9007C79F4 /* ControlImageView.swift */; };
 		93D8428628F44F15007C79F4 /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D8428528F44F14007C79F4 /* PageModel.swift */; };
+		93D8428828F45009007C79F4 /* PagesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D8428728F45009007C79F4 /* PagesData.swift */; };
 		93E767C828E617BB003B5288 /* InfoPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E767C728E617BB003B5288 /* InfoPanelView.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		9364278E28E3404C006DD3A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		93D8428328F42DD9007C79F4 /* ControlImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlImageView.swift; sourceTree = "<group>"; };
 		93D8428528F44F14007C79F4 /* PageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
+		93D8428728F45009007C79F4 /* PagesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesData.swift; sourceTree = "<group>"; };
 		93E767C728E617BB003B5288 /* InfoPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPanelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +106,7 @@
 		9364279828E343AD006DD3A7 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				93D8428728F45009007C79F4 /* PagesData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				93D8428628F44F15007C79F4 /* PageModel.swift in Sources */,
 				9364278A28E3404A006DD3A7 /* ContentView.swift in Sources */,
 				9364278828E3404A006DD3A7 /* PinchApp.swift in Sources */,
+				93D8428828F45009007C79F4 /* PagesData.swift in Sources */,
 				93E767C828E617BB003B5288 /* InfoPanelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
