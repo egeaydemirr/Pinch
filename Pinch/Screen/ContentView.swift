@@ -11,7 +11,8 @@ struct ContentView: View {
     //MARK: - Property
     @State private var isAnimating: Bool = false
     @State private var imageScale: CGFloat = 1
-    @State private var imageOffset: CGSize = .zero //Konumu, is equals to CGSize(width: 0, height: 0)
+    @State private var imageOffset: CGSize = .zero //Konumu
+    @State private var isDrawerOpen: Bool = false
     
     //MARK: - Function
     
@@ -145,6 +146,34 @@ struct ContentView: View {
                     .padding(.bottom, 30)
                 , alignment: .bottom
             )
+            // MARK: - DRAWER
+            .overlay(
+                HStack(spacing: 12) {
+                    // MARK: Drawer Handle
+                    Image(systemName:"chevron.compact.left")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 40)
+                        .padding(8)
+                        .foregroundColor(.secondary)
+                        .onTapGesture(perform: {
+                            withAnimation(.easeOut) {
+                                isDrawerOpen.toggle()
+                            }
+                        })
+                    // MARK: Thumbnails
+                    Spacer()
+                }
+                    .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
+                    .background(.ultraThinMaterial)
+                    .cornerRadius(12)
+                    .opacity(isAnimating ? 1 : 0)
+                    .frame(width: 260)
+                    .padding(.top, UIScreen.main.bounds.height / 12)
+                    .offset(x: isDrawerOpen ? 20 : 215)
+                , alignment: .topTrailing
+                
+                )
         }// NavigationView
         .navigationViewStyle(.stack )
     }
@@ -152,6 +181,8 @@ struct ContentView: View {
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
             ContentView()
+                .preferredColorScheme(.dark)
+                
         }
     }
 }
