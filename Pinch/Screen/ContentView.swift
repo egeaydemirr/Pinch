@@ -78,6 +78,33 @@ struct ContentView: View {
                 .padding(.top, 30)
             , alignment: .top
             )
+            //MARK: CONTROLS
+            .overlay(
+                Group{
+                    HStack{
+                        // Scale Down
+                        Button {
+                            //Some Actions
+                        }label: {
+                            ControlImageView(icon: "minus.magnifyingglass")
+                        }
+                        // Reset
+                        Button {
+                            //Some Actions
+                        }label: {
+                            ControlImageView(icon: "arrow.up.left.and.down.right.magnifyingglass")
+                        }
+                        // Scale Up
+                        Button {
+                            //Some Actions
+                        }label: {
+                            ControlImageView(icon: "plus.magnifyingglass")
+                        }
+                    }//: End Controls
+                }
+                    .padding(.bottom, 30)
+                , alignment: .bottom
+            )
         }// NavigationView
         .navigationViewStyle(.stack )
     }
@@ -88,3 +115,5 @@ struct ContentView: View {
         }
     }
 }
+
+
