@@ -37,7 +37,7 @@ struct ContentView: View {
                     .opacity(isAnimating ? 1 : 0)
                     .offset(x: imageOffset.width, y: imageOffset.height)
                     .scaleEffect(imageScale)
-                //MARK: -1. TAB GESTURE
+                //MARK: - 1. TAB GESTURE
                     .onTapGesture(count: 2, perform:  {
                         if imageScale == 1 {
                             withAnimation(.spring()){
@@ -48,7 +48,7 @@ struct ContentView: View {
                             resetImageState()
                         }
                     })
-                //MARK: -2. Drag Gesture
+                //MARK: - 2. Drag Gesture
                     .gesture(
                         DragGesture()
                             .onChanged{value in
@@ -61,8 +61,26 @@ struct ContentView: View {
                                 }
                             }
                     )
-                
-                
+                // MARK: - 3. Magnification Gesture
+                    .gesture(
+                    MagnificationGesture()
+                        .onChanged{value in
+                            withAnimation(.linear(duration: 1)){
+                                if imageScale >= 1 && imageScale <= 5 {
+                                    imageScale = value
+                                }else if imageScale > 5 {
+                                        imageScale = 5
+                                }
+                            }
+                        }
+                        .onEnded { _ in
+                            if imageScale >= 5 {
+                                imageScale = 5
+                            }else if imageScale <= 1 {
+                                    resetImageState()
+                            }
+                        }
+                    )
             }// ZStack:
             .navigationTitle("Pinch and Zoom")
             .navigationBarTitleDisplayMode(.inline)
